@@ -34,6 +34,8 @@ class App extends Component {
       customers : '',
       completed : 0
     }
+
+    
   }
 
   stateRefresh = () =>{
@@ -41,7 +43,8 @@ class App extends Component {
     this.setState = ({
       customers : '',
       completed : 0
-    })*/
+    })
+    */
 
     this.callApi()
     .then( res => this.setState({customers : res}))
@@ -81,12 +84,13 @@ class App extends Component {
                 <TableCell>생년월일</TableCell>
                 <TableCell>성별</TableCell>
                 <TableCell>직업</TableCell>
+                <TableCell>설정</TableCell>
               </TableRow>
             </TableHead>
           <TableBody>
             { this.state.customers ?  this.state.customers.map( (c) =>{
               return (
-                <Customer key={c.id} id={c.id} image = {c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job}/>
+                <Customer key={c.id} id={c.id} image = {c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job} stateRefresh={this.stateRefresh} />
               )
             }) : 
             <TableRow>

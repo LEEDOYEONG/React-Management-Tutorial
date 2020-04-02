@@ -20,9 +20,8 @@ class CustomerAdd extends React.Component{
         e.preventDefault();
         await this.addCustomer()
         .then((response)=> {
-            console.log(response.data);
         })
-        /*
+        
         this.setState({
             file : null,
             userName : "",
@@ -31,8 +30,7 @@ class CustomerAdd extends React.Component{
             job : "",
             fileName : ""
         })
-        */
-
+        
         this.props.stateRefresh();
         
     }
