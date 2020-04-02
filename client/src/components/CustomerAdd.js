@@ -13,13 +13,13 @@ class CustomerAdd extends React.Component{
             job : "",
             fileName : ""
         }
+        
     }
 
     handleFormSubMit = async (e) => {
         e.preventDefault();
         await this.addCustomer()
         .then((response)=> {
-            console.log('hello');
             console.log(response.data);
         })
         /*
@@ -32,8 +32,9 @@ class CustomerAdd extends React.Component{
             fileName : ""
         })
         */
-        window.location.reload();
 
+        this.props.stateRefresh();
+        
     }
  
     handleFileChange = (e) => {
