@@ -43,8 +43,8 @@ class App extends Component {
     this.setState = ({
       customers : '',
       completed : 0
-    })
-    */
+    })*/
+    
 
     this.callApi()
     .then( res => this.setState({customers : res}))
