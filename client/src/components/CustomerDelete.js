@@ -6,6 +6,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+
+
 class CustomerDelete extends React.Component{
 
     constructor(props){
@@ -35,7 +37,6 @@ class CustomerDelete extends React.Component{
         }).then(
             this.props.stateRefresh()
         );
-        
     }
 
     render(){
@@ -52,7 +53,7 @@ class CustomerDelete extends React.Component{
                     </Typography>
                 </DialogContent>
                 <DialogActions>
-                    <Button variant="contained" color="primary" onClick={ () => this.deleteCustomer(this.props.id)}>삭제</Button>
+                    <Button variant="contained" color="primary" onClick={()=> this.deleteCustomer(this.props.id)}>삭제</Button>
                     <Button variant="outlined" color="primary" onClick={this.handleClose}>닫기</Button>
                 </DialogActions>
             </Dialog>
